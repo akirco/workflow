@@ -9,8 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: visiky/dingtalk-release-notify@v-0.1.5
+      - uses: visiky/dingtalk-release-notify@main
         with:
+          GITHUB_TOKEN: ${{ github.token }}
           DING_TALK_TOKEN: ${{ secrets.DING_TALK_ACCESS_TOKEN}}
           owner: R3nzTheCodeGOD
           repo: R3nzSkin
