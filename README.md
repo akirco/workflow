@@ -1,1 +1,1 @@
-# workflow
+# self-hosted workflow repo
