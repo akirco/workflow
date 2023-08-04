@@ -1,20 +1,12 @@
 name: DingTalk Release Notify
-  uses: visiky/dingtalk-release-notify@v-0.1.5
-  with:
-    # Secret GitHub API token to use for making API requests.
-    GITHUB_TOKEN: ${{ github.token }}
-    DING_TALK_TOKEN: eac014599bd8fe0a1225d3f997eeee769093b3f0f281f419260002cbf5d1e16f
-    # github owner
-    owner: R3nzTheCodeGOD
-    # github repo
-    repo: R3nzSkin
-    # Template of nofify title message in DingTalk
-    notify_title: # optional, default is 👏 { repo } { release_tag } Released
-    # Template of nofify body message in DingTalk
-    notify_body: # optional, default is ## { title }    { body }
-    # Template of nofify footer message in DingTalk
-    notify_footer: # optional, default is > 前往 [**{ repo }** { release_tag }]({ release_url }) 查看完整信息.
-    # at all users
-    at_all: # optional
-    # support prerelease, if prerelease list is empty, use last release
-    enable_prerelease: # optional
+uses: visiky/dingtalk-release-notify@v-0.1.5
+with:
+  GITHUB_TOKEN: '${{ github.token }}'
+  DING_TALK_TOKEN: eac014599bd8fe0a1225d3f997eeee769093b3f0f281f419260002cbf5d1e16f
+  owner: R3nzTheCodeGOD
+  repo: R3nzSkin
+  notify_title: null
+  notify_body: null
+  notify_footer: null
+  at_all: null
+  enable_prerelease: null
