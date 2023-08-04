@@ -1,14 +1,16 @@
 name: DingTalk Release Notify
+
 on:
-  workflow_dispatch:
-uses: visiky/dingtalk-release-notify@v-0.1.5
-with:
-  GITHUB_TOKEN: '${{ github.token }}'
-  DING_TALK_TOKEN: eac014599bd8fe0a1225d3f997eeee769093b3f0f281f419260002cbf5d1e16f
-  owner: R3nzTheCodeGOD
-  repo: R3nzSkin
-  notify_title: 
-  notify_body: 
-  notify_footer: 
-  at_all: 
-  enable_prerelease: 
+  workflow_dispatch: # manual trigger workflow to nofify dingTalk
+  release:
+    types: [published, edited]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: visiky/dingtalk-release-notify@v-0.1.5
+        with:
+          DING_TALK_TOKEN: ${{ secrets.DING_TALK_ACCESS_TOKEN}}
+          owner: R3nzTheCodeGOD
+          repo: R3nzSkin
